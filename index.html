@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Borja Montaño</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">[Tu Logo]</div>
+        <button id="menu-toggle" class="menu-icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#" id="open-game-modal">Game</a></li>
+            </ul>
+        </nav>
+        <button id="themeToggle" class="btn-primary">Modo Oscuro</button>
+    </header>
+    
+
+    <!-- Hero Section -->
+    <section class="hero parallax">
+        <div class="hero-content fade-in">
+            <div class="titulo">
+                <h1 class="line-1 anim-typewriter">Hola, soy Borja Montaño, desarrollador web</h1>
+            </div>
+            <p>{Creo experiencias web modernas y eficientes}</p>
+            <a href="#projects" class="btn-primary">Ver mis proyectos</a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about fade-in">
+        <h2>Sobre mí</h2>
+        <div class="about-content">
+            <div class="about-left">
+                <div class="about-photo">
+                    <img src="img/avatar-de-personne-icone-homme.png" alt="Foto de perfil">
+                </div>
+                <div class="about-text">
+                    <p>Texto descriptivo sobre tu experiencia y habilidades. Aquí puedes añadir información sobre tu
+                        carrera, tus logros y lo que te apasiona en el desarrollo web.</p>
+                </div>
+            </div>
+            <div class="about-right">
+                <div class="skills">
+                    <h3>Mis habilidades</h3>
+                    <div class="skill">
+                        <div class="skill-icon">
+                            <i class="fa-brands fa-html5 fa-3x"></i>
+                        </div>
+                        <div class="skill-info">
+                            <div class="skill-name">HTML</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-icon">
+                            <i class="fa-brands fa-css3-alt fa-3x"></i>
+                        </div>
+                        <div class="skill-info">
+                            <div class="skill-name">CSS</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-icon">
+                            <i class="fa-brands fa-js fa-3x"></i>
+                        </div>
+                        <div class="skill-info">
+                            <div class="skill-name">JavaScript</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-icon">
+                            <i class="fa-brands fa-java fa-3x"></i>
+                        </div>
+                        <div class="skill-info">
+                            <div class="skill-name">Java</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="projects fade-in">
+        <h2>Proyectos destacados</h2>
+        <div class="project-grid">
+            <div class="project-item" onclick="openModal('modal1')">
+                <img src="img/jeff-brown-xOj6_Ha1_R8-unsplash.jpg" alt="Proyecto 1">
+                <h3>Proyecto 1</h3>
+                <p>Descripción breve del proyecto 1</p>
+            </div>
+            <div class="project-item" onclick="openModal('modal2')">
+                <img src="img/willem-chan-_Sbw7OX-u4k-unsplash.jpg" alt="Proyecto 2">
+                <h3>Proyecto 2</h3>
+                <p>Descripción breve del proyecto 2</p>
+            </div>
+            <div class="project-item" onclick="openModal('modal3')">
+                <img src="img/osman-rana-xhpMNieqBwA-unsplash.jpg" alt="Proyecto 3">
+                <h3>Proyecto 3</h3>
+                <p>Descripción breve del proyecto 3</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Proyecto 1</h2>
+            <p>Detalles del proyecto 1...</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Proyecto 2</h2>
+            <p>Detalles del proyecto 2...</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Proyecto 3</h2>
+            <p>Detalles del proyecto 3...</p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact fade-in">
+        <h2>Ponte en contacto</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" placeholder="Tu correo electrónico" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje:</label>
+                <textarea placeholder="Tu mensaje" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+        <div id="formFeedback" class="form-feedback"></div>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/tu-perfil" target="_blank" aria-label="LinkedIn"><i
+                    class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/tu-perfil" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/tu-perfil" target="_blank" aria-label="Twitter"><i
+                    class="fab fa-twitter"></i></a>
+        </div>
+    </section>
+
+
+
+    <!-- Modal Structure -->
+    <div id="game-modal" class="modal1 hidden">
+        <div class="modal1-content">
+            <span class="close-button">&times;</span>
+            <div id="game-container">
+                <h1>3 en Raya</h1>
+
+                <select id="cpu-difficulty">
+                    <option value="easy">Fácil</option>
+                    <option value="medium">Medio</option>
+                    <option value="hard">Imposible</option>
+                </select>
+
+                <!-- Selección de modo -->
+                <div id="mode-selection">
+                    <button id="player-vs-player">Jugador vs Jugador</button>
+                    <button id="player-vs-cpu">Jugador vs CPU</button>
+                </div>
+
+                <!-- Formulario para ingresar los nombres de los jugadores -->
+                <div id="name-input" class="hidden">
+                    <label for="player1-name">Nombre Jugador 1:</label>
+                    <input type="text" id="player1-name" placeholder="Jugador 1" required>
+
+                    <div id="player2-name-container" class="hidden">
+                        <label for="player2-name">Nombre Jugador 2:</label>
+                        <input type="text" id="player2-name" placeholder="Jugador 2">
+                    </div>
+
+                    <button id="start-game-btn">Iniciar Juego</button>
+                </div>
+
+                <!-- Tablero del juego -->
+                <div id="board" class="hidden">
+                    <div class="cell" data-index="0"></div>
+                    <div class="cell" data-index="1"></div>
+                    <div class="cell" data-index="2"></div>
+                    <div class="cell" data-index="3"></div>
+                    <div class="cell" data-index="4"></div>
+                    <div class="cell" data-index="5"></div>
+                    <div class="cell" data-index="6"></div>
+                    <div class="cell" data-index="7"></div>
+                    <div class="cell" data-index="8"></div>
+                </div>
+
+                <!-- Estado del juego -->
+                <div id="status" class="hidden">
+                    <p id="message"></p>
+                    <button id="reset-button">Reiniciar Juego</button>
+                    <button id="volver-atras">Volver al Menú</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Borja Montaño. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+          document.getElementById('menu-toggle').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.getElementById('main-nav').classList.toggle('active');
+});
+  
+    </script>
+
+    <script src="js/app.js"></script>
+    <script src="js/game.js"></script>
+</body>
+
+</html>
