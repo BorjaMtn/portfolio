@@ -1,0 +1,123 @@
+@import './base.css';
+
+/* --- Importar Fuentes desde Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+
+/* --- Definir Variables CSS Globales (Paleta Reducida) --- */
+:root {
+  /* Paleta Principal */
+  --color-background: #111827; /* Gris muy oscuro azulado */
+  --color-surface-1: #1f2937; /* Gris oscuro para superficies (sidebar, cards) */
+  --color-border: #374151; /* Gris medio-oscuro para bordes sutiles */
+  --color-text-primary: #f9fafb; /* Texto principal (casi blanco) */
+  --color-text-secondary: #9ca3af; /* Texto secundario (gris claro) */
+  --color-accent-primary: #3b82f6; /* Azul brillante (NUESTRO ACENTO PRINCIPAL) */
+  --color-accent-purple: #8b5cf6; /* Morado (Comentado/Eliminado) */
+
+  /* Colores Estado (Derivados o Neutrales) */
+  --color-success: #10b981; /* Verde para éxito (podría ser azul también) */
+  --color-error: #ef4444; /* Rojo para error */
+  --color-hover-bg: rgba(59, 130, 246, 0.1); /* Azul muy transparente para hover */
+
+  /* Tipografía */
+  --font-main:
+    'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-accent: 'IBM Plex Mono', monospace;
+
+  /* Otros */
+  --border-radius-base: 4px;
+  --transition-base: all 0.2s ease-in-out; /* Transición estándar */
+}
+
+/* --- Estilos Base --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Mejor manejo del modelo de caja */
+}
+
+html {
+  line-height: 1.5; /* Espaciado de línea base */
+  -webkit-text-size-adjust: 100%; /* Previene ajuste de fuente en móviles */
+  tab-size: 4;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  font-size: 16px;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Limpiar #app --- */
+
+/* --- Estilos generales --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-accent);
+  /* Títulos principales con color de texto, no acento por defecto */
+  color: var(--color-text-primary);
+  margin-top: 0;
+  margin-bottom: 1rem; /* Espacio base debajo de títulos */
+  font-weight: 600;
+  line-height: 1.3;
+}
+/* Podemos dar color de acento a títulos específicos si queremos */
+/* h2 { color: var(--color-accent-primary); } */
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--color-accent-primary); /* Usamos el azul como color de enlace principal */
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+a:hover {
+  /* color: var(--color-text-primary); */ /* O un azul más claro */
+  filter: brightness(1.2); /* Hacemos el azul un poco más brillante */
+}
+
+/* Estilos base para botones (útil si creamos más) */
+button {
+  font-family: inherit; /* Hereda fuente */
+  cursor: pointer;
+}
+
+/* Estilos base para inputs (útil para formulario) */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface-1);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--border-radius-base);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  border-color: var(--color-accent-primary);
+  box-shadow:
+    0 0 0 2px var(--color-background),
+    0 0 0 4px var(--color-accent-primary); /* Efecto de foco moderno */
+}
+
+/* Añade más resets o estilos base globales aquí si los necesitas */

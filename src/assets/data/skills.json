@@ -1,0 +1,69 @@
+[
+  {
+    "category": "Frontend",
+    "skills": [
+      { "name": "HTML5" },
+      { "name": "CSS3" },
+      { "name": "JavaScript (ES6+)" },
+      { "name": "Vue.js (Vue 3)" },
+      { "name": "React" },
+      { "name": "Next.js" },
+      { "name": "Tailwind CSS" },
+      { "name": "Bootstrap" },
+      { "name": "Responsive Design" },
+      { "name": "Sass / SCSS" },
+      { "name": "TypeScript" },
+      { "name": "Vite" },
+      { "name": "Java" },
+      { "name": "Spring Boot" },
+      { "name": "Thymeleaf" },
+      { "name": "JavaFX" },
+      { "name": "Java Swing" }
+    ]
+  },
+  {
+    "category": "Backend",
+    "skills": [
+      { "name": "Python (Flask/Django)" },
+      { "name": "PHP (Laravel)" },
+      { "name": "REST APIs" },
+      { "name": "JWT Authentication" },
+      { "name": "OAuth2" },
+      { "name": "FastAPI" },
+      { "name": "Spring Boot" },
+      { "name": "Java" },
+      { "name": "FastAPI" },
+      { "name": "Spring Boot" },
+      { "name": "Java" }
+    ]
+  },
+  {
+    "category": "Bases de Datos",
+    "skills": [
+      { "name": "SQL" },
+      { "name": "PostgreSQL" },
+      { "name": "MySQL" },
+      { "name": "Sqlite" }
+    ]
+  },
+  {
+    "category": "Herramientas y DevOps",
+    "skills": [
+      { "name": "Git / GitHub" },
+      { "name": "Docker" },
+      { "name": "Linux / Bash" },
+      { "name": "CI/CD (GitHub Actions)" },
+      { "name": "Vitest / Jest (Testing)" },
+      { "name": "Postman" },
+      { "name": "Trello" }
+    ]
+  },
+  {
+    "category": "Otros",
+    "skills": [
+      { "name": "Metodologías Ágiles (Scrum)" },
+      { "name": "UX/UI Design" },
+      { "name": "SEO" }
+    ]
+  }
+]

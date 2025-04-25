@@ -1,0 +1,38 @@
+[
+  {
+    "id": "proj-01",
+    "title": "Shopify Analytics",
+    "shortDescription": "Dashboard de analítica para Shopify y GA4.",
+    "longDescription": "Desarrollo de un dashboard de analítica para Shopify y Google Analytics 4. La aplicación permite a los usuarios visualizar métricas clave de su tienda Shopify y GA4 en un solo lugar. Se implementó autenticación JWT para la seguridad y se utilizó Postgres como base de datos. El frontend fue construido con Next.js y el backend con Laravel.",
+    "technologies": ["Next.js", "Laravel", "PostgreSQL", "Tailwind CSS", "Sactum", "JWT"],
+    "imageUrl": "/images/proyects/prueba.jpg",
+    "repoUrl": "https://github.com/BorjaMtn/shopify-analytics-backend/"
+  },
+  {
+    "id": "proj-02",
+    "title": "Chat en Tiempo Real",
+    "shortDescription": "Aplicación de chat multi-sala usando OpenAI y Whatsapp APIs.",
+    "longDescription": "Construcción de una aplicación de chat que permite a los usuarios unirse a diferentes salas y conversar en tiempo real. El principal reto fue gestionar las conexiones de las APIs de OpenAI y Whatsapp y la sincronización de mensajes entre múltiples clientes. El backend maneja la lógica de salas y la difusión de mensajes.",
+    "technologies": ["React", "Node.js", "Laravel", "Tailwind", "Whatsapp API", "OpenAI API"],
+    "imageUrl": "/images/projects/chat-app.jpg",
+    "repoUrl": "#"
+  },
+  {
+    "id": "proj-03",
+    "title": "Dieta AI",
+    "shortDescription": "Aplicacion completa donde se puede crear una dietas en base a necesidades, ver productos, recetas, etc.",
+    "longDescription": "Desarrollo de una aplicación web completa que permite a los usuarios crear dietas personalizadas basadas en sus necesidades nutricionales. La aplicación incluye un sistema de autenticación, gestión de recetas y productos. Se utilizó Next.js y Laravel para el backend, y PostgreSQL como base de datos. Tambien se usan APIs externars para obtener información sobre productos y recetas.",
+    "technologies": ["Next.js", "Laravel", "PostgreSQL", "Tailwind CSS", "Sactum", "JWT"],
+    "imageUrl": "/images/projects/api-blog.jpg",
+    "repoUrl": "https://github.com/BorjaMtn/DIETA_AI_FRONT/"
+  },
+  {
+    "id": "proj-04",
+    "title": "Este Portfolio Interactivo",
+    "shortDescription": "¡El portfolio que estás viendo ahora mismo!",
+    "longDescription": "Desarrollo de un portfolio personal con un enfoque interactivo y diferente, simulando una interfaz de consola/laboratorio. Construido con Vue.js 3, Vite y Pinia para la gestión del estado. Se utilizaron animaciones CSS y lógica de componentes para crear una experiencia de usuario dinámica. El objetivo era demostrar habilidades de frontend y creatividad.",
+    "technologies": ["Vue.js", "Vite", "CSS3", "JavaScript"],
+    "imageUrl": "/images/projects/portfolio-lab.jpg",
+    "repoUrl": "https://github.com/tu-usuario/repo-de-este-portfolio"
+  }
+]
