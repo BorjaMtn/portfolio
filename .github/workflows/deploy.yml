@@ -1,0 +1,58 @@
+# Nombre del Workflow
+name: Deploy Vite site to Pages
+
+on:
+  # Se ejecuta en pushes a la rama principal (ajusta si tu rama es otra)
+  push:
+    branches: ['main']
+
+  # Permite ejecutarlo manualmente desde la pestaña Actions
+  workflow_dispatch:
+
+# Configura permisos para el token de despliegue
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Permite un solo despliegue concurrente
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+jobs:
+  # Trabajo de construcción (Build)
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout # Descarga tu código
+        uses: actions/checkout@v4
+      - name: Set up Node.js # Configura Node.js
+        uses: actions/setup-node@v4
+        with:
+          # Asegúrate que esta versión de Node sea compatible con tu proyecto
+          node-version: '18'
+          cache: 'npm' # Cambia a 'yarn' si usas yarn
+      - name: Install dependencies # Instala dependencias
+        # Cambia a 'yarn install' si usas yarn
+        run: npm install
+      - name: Build # Construye el proyecto
+        # Cambia a 'yarn build' si usas yarn y ese es tu script de build
+        run: npm run build
+      - name: Upload artifact # Sube el resultado para el despliegue
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Sube la carpeta 'dist' (asegúrate que tu build genere esta carpeta)
+          path: './dist'
+
+  # Trabajo de despliegue (Deploy)
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build # Necesita que el trabajo 'build' termine primero
+    steps:
+      - name: Deploy to GitHub Pages # Despliega en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
