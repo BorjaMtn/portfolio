@@ -32,7 +32,8 @@ jobs:
         with:
           # Asegúrate que esta versión de Node sea compatible con tu proyecto
           node-version: '18'
-          cache: 'npm' # Cambia a 'yarn' si usas yarn
+          # --- LÍNEA COMENTADA PARA DESHABILITAR LA CACHÉ ---
+          # cache: 'npm' # Cambia a 'yarn' si usas yarn
       - name: Install dependencies # Instala dependencias
         # Cambia a 'yarn install' si usas yarn
         run: npm install
